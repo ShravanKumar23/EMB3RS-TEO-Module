@@ -63,10 +63,6 @@ Users, like industries and other sources that produce excess heat, will provide 
 
 The EMB3Rs platform will integrate several analysis modules that will allow a full exploration of the feasible technical routes to the recovery and use of the available excess thermal energy. The code for each of the independent modules will be made available at https://gitlab.pdmfc.com/dashboard/projects.
 
-Authors
-•	Shravan Kumar, developer
-•	Jagruti Thakur, developer
-•	Francesco Gardumi, developer
 
 Acknowledgments
 
