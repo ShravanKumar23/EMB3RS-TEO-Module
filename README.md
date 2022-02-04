@@ -43,11 +43,17 @@ Instruction to run the model
 - The code and the input file must be downloaded and saved in a specific manner. A main folder called ‘TEO’ must be created and the code will be down-loaded into this folder. Within this main folder, two sub folders named ‘Input_data’ and ‘Output_data’ must be created. The input file must be down-loaded into the ‘Input_data’ folder. A representation of how the files must be organized is shown below. 
 
 •	TEO (Main folder) 
+
   o	Input_data 
+  
     	Input_file_TEO.xlsx 
+    
   o	Output_data 
+  
   o	TEO_Model
+  
   o	TEO_functions
+  
   o	TEO_running_file
 
 - Create two folders, named ‘Input_data’ and ‘Output_data’. The python file with the code, the functions and the two folders mentioned above should be located in the same directory on the computer. 
