@@ -6,5 +6,5 @@ The ‘sets’ define the physical structure of a model, usually independent fro
 
 .. csv-table:: SETS
    :file: sets.csv
-   :widths: 20, 80
+   :widths: 20, 70, 10
    :header-rows: 1
