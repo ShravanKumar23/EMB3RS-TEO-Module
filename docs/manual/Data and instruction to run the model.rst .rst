@@ -1,8 +1,9 @@
 =================================
-#Running the TEO for the test case
-
-##Data and instruction to run the model 
+Debugging a model: useful tips
 =================================
+
+Adding a dummy technology
+----------------------------------
 
 The input file for the prototype is ‘Input_file_TEO.xlsx’, which can be accessed at ‘LINK’. To run the TEO, the code files named ‘TEO_Model’, ‘TEO_functions’, TEO_running_file’, and the input file must be downloaded and saved in a specific manner. A main folder called ‘TEO’ must be created and the code will be downloaded into this folder. Within this main folder, two sub folders named ‘Input_data’ and ‘Output_data’ must be created. The input file must be saved into the ‘Input_data’ folder. A representation of how the files must be organised is shown below.  
 
