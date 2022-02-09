@@ -1,5 +1,5 @@
 ========================================
-Running the TEo for the Test case
+Running the TEO for the Test case
 ========================================
 Data and instruction to run the model
 ------------------------------------------
