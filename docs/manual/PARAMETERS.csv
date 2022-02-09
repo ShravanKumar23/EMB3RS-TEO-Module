@@ -19,7 +19,7 @@ OperationalLife[r,t];Useful lifetime of a technology, expressed in years.
 ResidualCapacity[r,t,y];Remained capacity available from before the modelling period.
 InputActivityRatio[r,t,f,m,y];Rate of use of a commodity by a technology, as a ratio of the rate of activity.
 OutputActivityRatio[r,t,f,m,y];Rate of commodity output from a technology, as a ratio of the rate of activity.
-OuputModeofOpeartion[r,t,m,y];Binary parameter indicating the mode of operation in which a technology has an output activity ratio
+OuputModeofOperation[r,t,m,y];Binary parameter indicating the mode of operation in which a technology has an output activity ratio
 CapitalCost[r,t,y];Capital investment cost of a technology, per unit of capacity.
 VariableCost[r,t,m,y];Cost of a technology for a given mode of operation (Variable O&M cost), per unit of activity.
 FixedCost[r,t,y];Fixed O&M cost of a technology, per unit of capacity.
