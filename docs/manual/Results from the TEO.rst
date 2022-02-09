@@ -34,25 +34,25 @@ The Intra annual heat generation from sources is shown in the Figure below. The 
 .. figure::  Documents/Images/Intra_annual_heat_generation_from_sources.png
    :align:   center
    
-              Installed capacity of storages
+             Intra annual heat generation from sources
               
 The Intra annual storage charge or discharge for Residential buildings is shown in Figure below. The storage is continuously cycled according to the sink demand profiles.     
  
 .. figure::  Documents/Images/Intra_annual_storage_operation.png
    :align:   center
    
-              Installed capacity of storages
+              Intra annual storage operation
               
  Annual costs (investment, fuel, operation & maintenance) associated with the technologies. The investment costs for the sinks is shown in the Figure below.
   
 .. figure::  Documents/Images/Invetsment_cost.png
    :align:   center
    
-              Installed capacity of storages
+              Investment Costs
  
  The operation and maintenance costs of the sources and the sinks is shown in the Figure below.        
    
 .. figure::  Documents/Images/Operating_cost.png
    :align:   center
    
-              Installed capacity of storages
+              Operation costs
