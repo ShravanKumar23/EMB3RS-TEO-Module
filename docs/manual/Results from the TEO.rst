@@ -48,7 +48,7 @@ Annual costs (investment, fuel, operation & maintenance) associated with the tec
 .. figure::  Documents/Images/Invetsment_cost.png
    :align:   center
    
-              Investment Costs
+              Investment Cost
  
  The operation and maintenance costs of the sources and the sinks is shown in the Figure below.        
    
