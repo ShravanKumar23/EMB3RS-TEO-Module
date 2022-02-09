@@ -1,27 +1,34 @@
-=======================================================
-How to contribute to the development of the tool
-=======================================================
+================================================================================
+Contributing to Techno-economic optimization module (TEO) of the EMB3RS project
+================================================================================
+We are very grateful that you are looking into how you can contribute to TEO module of the EMB3RS project. The TEO Module is used to conduct a source sink matching for optimal recovery and use of industrial excess heat.
 
-All the community is encouraged to collaborate to the maintenance and development of OSeMOSYS by proposing code modifications, enhancements and extensions. The proposers may want to have the modifications reviewed by experts and included in a bi-annual peer-reviewed publication on the status of development of OSeMOSYS. In such case, they shall submit a related `OSeMOSYS Enhancement Proposal (OEP) <https://github.com/OSeMOSYS/OSeMOSYS/issues/new?assignees=abhishek0208%2C+tniet%2C+willu47&labels=OEP&template=osemosys-enhancement-proposal.md&title=%5BOEP%5D+%3CReplace_with_name_of_proposal%3E>`_ on the `OSeMOSYS GitHub Repository <https://github.com/OSeMOSYS/OSeMOSYS>`_ following the instructions below:
- 
+Contributing to the TEO module is open to everyone who is interested, and we adopt an inclusive and open policy which is described in our code of conduct
 
--	Sign in or sign up to GitHub and create a new OEP using the GitHub Issue tracker in the `OSeMOSYS GitHub repository <https://github.com/OSeMOSYS/OSeMOSYS>`_.
+Some resources:
+-----------------
 
--	Fill in the OEP following the the template provided `here <https://github.com/OSeMOSYS/OSeMOSYS/issues/new?assignees=abhishek0208%2C+tniet%2C+willu47&labels=OEP&template=osemosys-enhancement-proposal.md&title=%5BOEP%5D+%3CReplace_with_name_of_proposal%3E>`_
+The main EMB3RS website is a good place to get started with EMB3RS You can find information on how to donwload the moduel and run it in the read me file on the repository or in the documentation.
 
-	* Give a short (250 words) description of what you are proposing for the OSeMOSYS formulation;
-	
-	* Describe the rational for the proposed change in the OSeMOSYS code, keeping in mind that changes to the main OSeMOSYS formulation should provide value to the wider OSeMOSYS community;
-	
-	* Provide a detailed description of proposed changes, to inform on how the OSeMOSYS formulation will be affected; this should include details on:
-	
-		1) addition, removal or changes of sets, parameters;
-		2) addition, removal or changes of equations;
-		3) addition, remove or changes of constraints.
-	
+The TEO is based on the open source energy system modeling tool OSeMOSYS The main OSeMOSYS website is a good place to get started with OSeMOSYS The forum is a great place to ask questions and search for answers from the knowledgeable community
 
-OEPs can then be discussed with the administrators of the OSeMOSYS organisation, and representatives of the OSeMOSYS Steering Committee in order to be either approved, rejected, or changes requested, following a peer-review process.
+Bugs
+------
 
-If an OEP is accepted, then the developers can submit a pull request in the repository of their chosen implementation linking back to the original OEP. The pull request will then be reviewed by the admins. The submission will also require additions to the main documentation.
+If you find a programming error in the TEO Module implementations, please submit an Issue in the repository. Follow the issue template for submitting a bug.
 
-For further information, please refer to the `contacts <http://www.osemosys.org/contact-us1.html>`_ provided on the OSeMOSYS website.
+If you find a more fundamental issue which you think is related with the formulation of TEO please submit the issue at the repository and specify the .
+
+Errors, typos or spelling mistakes in the documentation
+
+Ideas and Suggestions
+-----------------------
+
+If you have a great idea for how the TEO could be improved, or to suggest a useful addition to the model, please submit a feature request.
+
+Git Workflow
+-------------
+
+To work with the TEO code bases, please follow the forking workflow recommended for contributing to open-source projects. The steps below assume you have a Github account.
+
+Fork the repository to which you wish to contribute by clicking the grey fork button or visiting https://github.com/EMB3RS-TEO-Module/fork Clone your fork of the repository git clone http://github.com//EMB3RS-TEO-Module Create a new branch on which you will commit your changes git checkout -b Do the work and stage and commit your changes: git add ..., git commit -m "A nice descriptive message" Push the changes to your fork git push -u origin/ Submit a pull request from your fork of the repository to the master branch of the original repository. The pull request is reviewed. Any changes required by the review can be performed on the same branch and pushed to the forked repo as in the steps above. Once the pull request has been reviewed and accepted, you may delete your local copy of the branch git branch -d and update your copy of the master branch git checkout master, git pull origin master
