@@ -7,10 +7,9 @@ The technology mix (in terms of existing and newly installed yearly capacities i
 
 The installed capacities at the different sources is shown in Figure below. The model only uses 2 source outflows from the Metal casting industry. The excess heat from the      supermarket is not used use due to the low temperatures and thus needs expensive investments. 
 
-
 .. figure::  Documents/Images/Source_capacities.png
-   :align:   centre
-   
+   :align:   center
+              
               Source capacities
     
  
