@@ -15,7 +15,7 @@ The installed capacities at the different sources is shown in Figure below. The 
 The installed capacities at the different sinks is shown in the Figure below. The sinks capacities are based on the sink demand. As the demand grow over the years, the capacity is also increased. 
 
 .. figure::  Documents/Images/Sink_capacities.png
-   :align:   centre
+   :align:   center
    
               Sink capacities
             
