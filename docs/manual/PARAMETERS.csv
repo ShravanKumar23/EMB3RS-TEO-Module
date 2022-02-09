@@ -1,4 +1,4 @@
-Name;Description
+Name;Description;
 YearSplit[l,y];Duration of a modelled time slice, expressed as a fraction of the year. The sum of each entry over one modelled year should equal 1.
 DiscountRateTech[r,t];Technology specific value for the discount rate, expressed in decimals (e.g. 0.05)
 DiscountRateSto[r,t];Storage specific value for the discount rate, expressed in decimals (e.g. 0.05)
