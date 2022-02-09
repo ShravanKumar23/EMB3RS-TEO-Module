@@ -13,17 +13,17 @@ EMB3Rs (“User-driven Energy-Matching & Business Prospection Tool for Industria
    :maxdepth: 2
    :caption: Contents:
 
-   docs/Introduction
-   docs/Main Features of TEO Module
-   docs/Structure of the TEO
-   docs/SETS
-   docs/PARAMETERS
-   docs/VARIABLES
-   docs/Create a model using the TEO
-   docs/Running the TEO for the test case
-   docs/Solvers
-   docs/Results from the TEO
-   docs/References
+   Introduction
+   Main Features of TEO Module
+   Structure of the TEO
+   SETS
+   PARAMETERS
+   VARIABLES
+   Create a model using the TEO
+   Running the TEO for the test case
+   Solvers
+   Results from the TEO
+   References
    
    
 Indices and tables
