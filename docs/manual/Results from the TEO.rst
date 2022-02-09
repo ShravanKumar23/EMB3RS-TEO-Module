@@ -48,7 +48,7 @@ The Intra annual storage charge or discharge for Residential buildings is shown 
 .. figure::  Documents/Images/Invetsment_cost.png
    :align:   center
    
-              Investment Costs
+              Investment Cost
  
  The operation and maintenance costs of the sources and the sinks is shown in the Figure below.        
    
