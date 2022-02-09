@@ -1,5 +1,5 @@
 # Global Variables
-Varibales, Description, Units
+Name,Description,Units
 "RateOfDemand[r,l,f,y]>=0",Intermediate variable. It represents the energy that would be demanded in one time slice l if the latter lasted the whole year. It is a function of  the parameters SpecifiedAnnualDemand and SpecifiedDemandProfile. ,Energy
 ,,(per year)
 "Demand[r,l,f,y]>=0",Demand for one fuel in one time slice. ,Energy
