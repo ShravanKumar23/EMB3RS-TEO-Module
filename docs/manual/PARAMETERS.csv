@@ -62,8 +62,8 @@ Emissions,
 "AnnualEmissionLimit[r,e,y]",Annual upper limit for a specific emission generated in the whole modelled region.
 "ModelPeriodExogenousEmission[r,e]","It allows the user to account for additional emissions over the entire modelled period, on top of those computed endogenously by the model (e.g. generated outside the region)."
 "ModelPeriodEmissionLimit[r,e]","Annual upper limit for a specific emission generated in the whole modelled region, over the entire modelled period."
-"StorageUvalue[r,s]","Heat transfer co-efficient of the thermal energy storage tank. "
-"StorageFlowTemperature[r,s]","The temperature of water inflow into thermal energy storage." 
+"StorageUvalue[r,s]","Heat transfer co-efficient of the thermal energy storage tank."
+"StorageFlowTemperature[r,s]","The temperature of water inflow into thermal energy storage."
 "StorageReturnTemperature[r,s]","The return water temperature in the heating grid where the thermal energy storage is connected."
 "StorageAmbientTemperature[r,s]","The ambient temperature of the locations where the thermal energy storage is located. "
 "StorageL2D[r,s]","Binary parameter which indicates the length to diameter ratio of the thermal energy storage tank. Value is 0 if the L2D is 2 and  is 1 if the L2D is 4. "
