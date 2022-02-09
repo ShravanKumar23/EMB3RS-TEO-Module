@@ -9,7 +9,7 @@ Conversionlh[lh,l];Binary parameter linking one TimeSlice to a certain DaylyTime
 DaysInDayType[ls,ld,y];Number of days for each day type, within one week (natural number, ranging from 1 to 7)
 TradeRoute[r,rr,f,y];Binary parameter defining the links between region r and region rr, to enable or disable trading of a specific commodity. It has value 1 when two regions are linked, 0 otherwise
 DepreciationMethod[r];Binary parameter defining the type of depreciation to be applied. It has value 1 for sinking fund depreciation, value 2 for straight-line depreciation.
-SpecifiedAnnualDemand[r,f,y];Total specified demand for the year, linked to a specific ‘time of use’ during the year.
+SpecifiedAnnualDemand[r,f,y];Total specified demand for the year, linked to a specific â€˜time of useâ€™ during the year.
 SpecifiedDemandProfile[r,f,l,y];Annual fraction of energy-service or commodity demand that is required in each time slice. For each year, all the defined SpecifiedDemandProfile input values should sum up to 1.
 AccumulatedAnnualDemand[r,f,y];Accumulated Demand for a certain commodity in one specific year. It cannot be defined for a commodity if its SpecifiedAnnualDemand for the same year is already defined and vice versa.
 CapacityToActivityUnit[r,t];Conversion factor relating the energy that would be produced when one unit of capacity is fully used in one year.
@@ -50,7 +50,7 @@ TotalTechnologyModelPeriodActivityUpperLimit[r,t];Total maximum level of activit
 TotalTechnologyModelPeriodActivityLowerLimit[r,t];Total minimum level of activity allowed for a technology in the entire modelled period.
 ReserveMarginTagTechnology[r,t,y];Binary parameter tagging the technologies that are allowed to contribute to the reserve margin. It has value 1 for the technologies allowed, 0 otherwise.
 ReserveMarginTagFuel[r,f,y];Binary parameter tagging the fuels to which the reserve margin applies. It has value 1 if the reserve margin applies to the fuel, 0 otherwise.
-ReserveMargin[r,y];"Minimum level of the reserve margin required to be provided for all the tagged commodities, by the tagged technologies. If no reserve margin is required, the parameter will have value 1; if, for instance, 20% reserve margin is required, the parameter will have value 1.2."
+ReserveMargin[r,y];Minimum level of the reserve margin required to be provided for all the tagged commodities, by the tagged technologies. If no reserve margin is required, the parameter will have value 1; if, for instance, 20% reserve margin is required, the parameter will have value 1.2."
 RETagTechnology[r,t,y];Binary parameter tagging the renewable technologies that must contribute to reaching the indicated minimum renewable production target. It has value 1 for thetechnologies contributing, 0 otherwise.
 RETagFuel[r,f,y];Binary parameter tagging the fuels to which the renewable target applies to. It has value 1 if the target applies, 0 otherwise.
 REMinProductionTarget[r,y];Minimum ratio of all renewable commodities tagged in the RETagCommodity parameter, to be produced by the technologies tagged with the RETechnology parameter.
