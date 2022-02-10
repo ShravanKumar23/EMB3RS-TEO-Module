@@ -28,9 +28,9 @@ The techno-economic optimisation module should provide the following results:
 GitHub Repository
 ------------------
 
-The standalone version of the TEo module can be found on the GitHub reposiorty `here <https://github.com/ShravanKumar23/EMB3RS-TEO-Module>`_ .
+The standalone version of the TEO module can be found on the GitHub reposiorty `here <https://github.com/ShravanKumar23/EMB3RS-TEO-Module>`_ .
 
 License
 --------------
 
-The TEO module is licensed under Apache License Version 2.0, January 2004. You can find more information about the License `here <http://www.apache.org/licenses/>`_ . The lincese file cna be found on the GitHub reposiorty `here <https://github.com/ShravanKumar23/EMB3RS-TEO-Module>`_ .
+The TEO module is licensed under Apache License Version 2.0, January 2004. You can find more information about the License `here <http://www.apache.org/licenses/>`_ . The lincese file cna be found on the GitHub repository `here <https://github.com/ShravanKumar23/EMB3RS-TEO-Module>`_ .
