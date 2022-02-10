@@ -5,6 +5,7 @@ Introduction to EMB3RS TEO Module
 The Techno-Economic Optimization (TEO) module identifies least-cost combinations of technologies for using and conveying excess Heat and Cold (HC) from defined sources to defined sinks. The user (representing the excess heat producer - i.e., source – or a demand point – i.e., sink) wants to evaluate the options of utilizing excess HC generated to meet the heating/cooling demand for one or more known/assumed sinks. The objective of the optimisation is to find the least-cost mix of technologies and match between sources and sinks that satisfies the demands under constraints dictated by regulation, availability of heat, load profiles, techno-economic characteristics of technologies, investment plans, etc. The mix of technologies may include the District Heating/Cooling Network (DH/CN), technologies to upgrade the Temperature level on the sink or the source side, thermal storage on the sink or the source side, as well as heating alternatives. 
 
 The main requirements of the tool for building the techno-economic optimisation module within the EMB3RS framework are:
+
 •	High temporal resolution  – Daily to hourly
 
 •	Low simulation time
@@ -24,3 +25,12 @@ The techno-economic optimisation module should provide the following results:
 
 •	Emissions, emission savings and emission costs over the defined period.
 
+GitHub Repository
+------------------
+
+The standalone version of the TEo module can be found on the GitHub reposiorty `here <https://github.com/ShravanKumar23/EMB3RS-TEO-Module>`_ .
+
+License
+--------------
+
+The TEO module is licensed under Apache License Version 2.0, January 2004. You can find more information about the License `here <http://www.apache.org/licenses/>`_ . The lincese file cna be found on the GitHub reposiorty `here <https://github.com/ShravanKumar23/EMB3RS-TEO-Module>`_ .
