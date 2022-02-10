@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'EMB3RS_TEO_Module'
+project = 'EMB3RS TEO Module'
 copyright = '2022, Shravan Kumar, Francesco Gardumi, Jagruti Thakur'
 author = 'Shravan Kumar, Francesco Gardumi, Jagruti Thakur'
 
