@@ -1,4 +1,4 @@
-Welcome to EMB3RS_TEO_Module's documentation!
+Welcome to EMB3RS TEO Module's documentation!
 =============================================
 
 The EMB3RS Techno-Economic Optimization Module
