@@ -52,6 +52,22 @@ The sample case study for TEO, represents a case of industrial excess heat recov
 	
 	
 	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				The Reference Energy System (RES) of the Simple case study.
 
 
