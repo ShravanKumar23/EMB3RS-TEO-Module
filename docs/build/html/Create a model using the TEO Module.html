@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a model using the TEO Module &mdash; EMB3RS_TEO_Module 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EMB3RS_TEO_Module
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EMB3RS.html">EMB3RS project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to EMB3RS TEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Main%20Features%20of%20TEO%20Module.html">Main Features of TEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sets.html">Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Parameters.html">Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Variables.html">Variables</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EMB3RS_TEO_Module</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Create a model using the TEO Module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Create a model using the TEO Module.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-a-model-using-the-teo-module">
+<h1>Create a model using the TEO Module<a class="headerlink" href="#create-a-model-using-the-teo-module" title="Permalink to this headline"></a></h1>
+<p>This section introduces the user to the basic components of any application of TEO and describes the steps for the creation of a model. To this end, a sample case study is used and examples from it are shown throughout the section.
+The sample case study for TEO, represents a case of industrial excess heat recovery and use. The simple use case consists of two excess heat producers Supermarket and Metal casting Industry and three sink points District Heating and Cooling grid (DHC), office buildings and residential buildings. The excess heat load profiles for the source and sink points are be used. The case study is better represented using the reference energy system (RES) shown in Figure below.</p>
+<figure class="align-center" id="id1">
+<img alt="Documents/Images/RES.png" src="Documents/Images/RES.png" />
+<figcaption>
+<p><span class="caption-text">The Reference Energy System (RES) of the Simple case study.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The outflow temperatures of the metal casting industry are to be at 300, 90 and 70 degrees Celsius for its three outflows whereas the waste heat from the supermarket is at 50 degrees Celsius. On the sinks’ side, the DHC demand temperature was same as the average supply temperature of the DHN, which is at 90 degrees Celsius. The demand temperature profile of the office buildings was to be the same as that of the residential buildings at 90 degrees Celsius. The sources and the sinks are equipped with storages. This implied that the generation and supply technologies be connected to a storage technology, and also, the demand technologies be connected to storage systems.</p>
+<p>In the RES, The rectangles represent the technologies, the arrows represent the flow of energy and the vertical lines represent fuels. The RES is read from the left to the right, which means the primary side is on the left and the final side is on the right. The source nodes, metal casting industry and the supermarket, are modelled as technologies, whereas the sink nodes, being residential buildings, office buildings and DHC are modelled as fuels. The distribution grid has also been added as a technology as some components can either require or produce electricity. For the test case, the heat pumps in the system will require electricity to operate. The first set of vertical lines represent fuels at the primary level. These primary fuels consist of electricity, waste heat from the outflows of the metal casting industry at three different temperatures, and waste heat from supermarket. The waste heat from each source is supplied to a set of technologies. Here, as the platform is yet to be developed, we assume that the user has chosen a Heat Exchanger (HE), Waste Heat Recovery Boiler (WHRB) for the first waste heat outflow from the industry. Similarly, the second outflow makes use of a HE and a WHRB. The third outflow is provided to a Heat Pump (HP) and a HE. The supermarket waste heat is provided with a HP.</p>
+<p>It is to be noted that only one storage will be chosen for a set of technologies. Here, each technology is connected to a storage option. Based on the technology that is selected from the optimization process, the energy will be stored from the technology in the storage.</p>
+<p>The technologies are assessed for feasibility and selected in the process. The converted useful heat at the suitable temperature (here, the network temperature) is stored and also supplied to the secondary fuel level. The secondary level fuel is the converted useful heat. The converted useful heat is then supplied to the District Heating Network, which is modelled as a technology. The network is similar to the distribution grid being modelled as a technology, and they both account for losses. The heat from the network is supplied to all demand points by first being transformed into a tertiary level fuel of district heating water. To further assess the feasibility of the demand side system, solar technologies have been added. Solar thermal technologies have been added to all sinks.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Shravan Kumar, Francesco Gardumi, Jagruti Thakur.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

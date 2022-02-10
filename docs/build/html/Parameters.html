@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parameters &mdash; EMB3RS_TEO_Module 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variables" href="Variables.html" />
+    <link rel="prev" title="Sets" href="Sets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EMB3RS_TEO_Module
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="EMB3RS.html">EMB3RS project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to EMB3RS TEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Main%20Features%20of%20TEO%20Module.html">Main Features of TEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sets.html">Sets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Variables.html">Variables</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EMB3RS_TEO_Module</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Parameters</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Parameters.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parameters">
+<h1>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline"></a></h1>
+<p>The parameters are the user-defined numerical inputs to the model. While usually the structure of a model, therefore the sets, remains fixed across scenarios, it is common practice to change the values of some parameters when running different scenarios and/or sensitivity analyses. As will be clear in the following, each parameter is a function of the elements in one or more sets. For instance, CapitalCost[r, t, and y] indicates that the capital cost is a function of the region (r), the technology (t) and the year (y). A list and brief description of the parameters declared in the master version of OSeMOSYS is given in the below table [3].</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Parameter Name</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-odd"><td><p>YearSplit[l,y]</p></td>
+<td><p>Duration of a modelled time slice, expressed as a fraction of the year. The sum of each entry over one modelled year should equal 1.</p></td>
+</tr>
+<tr class="row-even"><td><p>DiscountRateTech[r,t]</p></td>
+<td><p>Technology specific value for the discount rate, expressed in decimals (e.g. 0.05).</p></td>
+</tr>
+<tr class="row-odd"><td><p>DiscountRateSto[r,t]</p></td>
+<td><p>Storage specific value for the discount rate, expressed in decimals (e.g. 0.05).</p></td>
+</tr>
+<tr class="row-even"><td><p>DaySplit[lh,y]</p></td>
+<td><p>Length of one DailyTimeBracket in one specific day as a fraction of the year (e.g., when distinguishing between days and night: 12h/(24h*365d)).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Conversionls[l,ls]</p></td>
+<td><p>Binary parameter linking one TimeSlice to a certain Season. It has value 0 if the TimeSlice does not pertain to the specific season, 1 if it does.</p></td>
+</tr>
+<tr class="row-even"><td><p>Conversionld[ld,l]</p></td>
+<td><p>Binary parameter linking one TimeSlice to a certain DayType. It has value 0 if the TimeSlice does not pertain to the specific DayType, 1 if it does.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Conversionlh[lh,l]</p></td>
+<td><p>Binary parameter linking one TimeSlice to a certain DaylyTimeBracket. It has value 0 if the TimeSlice does not pertain to the specific DaylyTimeBracket, 1 if it does.</p></td>
+</tr>
+<tr class="row-even"><td><p>DaysInDayType[ls,ld,y]</p></td>
+<td><p>Number of days for each day type, within one week (natural number, ranging from 1 to 7)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TradeRoute[r,rr,f,y]</p></td>
+<td><p>Binary parameter defining the links between region r and region rr, to enable or disable trading of a specific commodity. It has value 1 when two regions are linked, 0 otherwise</p></td>
+</tr>
+<tr class="row-even"><td><p>DepreciationMethod[r]</p></td>
+<td><p>Binary parameter defining the type of depreciation to be applied. It has value 1 for sinking fund depreciation, value 2 for straight-line depreciation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Demands</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>SpecifiedAnnualDemand[r,f,y]</p></td>
+<td><p>Total specified demand for the year, linked to a specific ‘time of use’ during the year.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SpecifiedDemandProfile[r,f,l,y]</p></td>
+<td><p>Annual fraction of energy-service or commodity demand that is required in each time slice. For each year, all the defined SpecifiedDemandProfile input values should sum up to 1.</p></td>
+</tr>
+<tr class="row-even"><td><p>AccumulatedAnnualDemand[r,f,y]</p></td>
+<td><p>Accumulated Demand for a certain commodity in one specific year. It cannot be defined for a commodity if its SpecifiedAnnualDemand for the same year is already defined and vice versa.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Performance</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>CapacityToActivityUnit[r,t]</p></td>
+<td><p>Conversion factor relating the energy that would be produced when one unit of capacity is fully used in one year.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AvailabilityFactor[r,t,y]</p></td>
+<td><p>Capacity available eachTimeSlice expressed as a fraction of the total installed capacity, with values ranging from 0 to 1. It gives the possibility to account for forced outages.</p></td>
+</tr>
+<tr class="row-even"><td><p>OperationalLife[r,t]</p></td>
+<td><p>Maximum time a technology can run in the whole year, as a fraction of the year ranging from 0 to 1. It gives the possibility to account for planned outages.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ResidualCapacity[r,t,y]</p></td>
+<td><p>Useful lifetime of a technology, expressed in years.</p></td>
+</tr>
+<tr class="row-even"><td><p>InputActivityRatio[r,t,f,m,y]</p></td>
+<td><p>Capacity available from before the modelling period.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OutputActivityRatio[r,t,f,m,y]</p></td>
+<td><p>Rate of use of a commodity by a technology, as a ratio of the rate of activity.</p></td>
+</tr>
+<tr class="row-even"><td><p>Technology costs</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>OuputModeofOpeartion[r,t,m,y],</p></td>
+<td><p>Binary parameter indicating the mode of operation in which a technology has an output activity ratio</p></td>
+</tr>
+<tr class="row-even"><td><p>CapitalCost[r,t,y]</p></td>
+<td><p>Capital investment cost of a technology, per unit of capacity.</p></td>
+</tr>
+<tr class="row-odd"><td><p>VariableCost[r,t,m,y]</p></td>
+<td><p>Cost of a technology for a given mode of operation (Variable O&amp;M cost), per unit of activity.</p></td>
+</tr>
+<tr class="row-even"><td><p>FixedCost[r,t,y]</p></td>
+<td><p>Fixed O&amp;M cost of a technology, per unit of capacity.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>TechnologyToStorage[r,t,s,m]</p></td>
+<td><p>Binary parameter linking a technology to the storage facility it charges. It has value 1 if the technology and the storage facility are linked, 0 otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TechnologyFromStorage[r,t,s,m]</p></td>
+<td><p>Binary parameter linking a storage facility to the technology it feeds. It has value 1 if the technology and the storage facility are linked, 0 otherwise.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageLevelStart[r,s]</p></td>
+<td><p>Level of storage at the beginning of first modelled year, in units of activity.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageMaxChargeRate[r,s]</p></td>
+<td><p>Maximum charging rate for the storage, in units of activity per year.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageMaxDischargeRate[r,s]</p></td>
+<td><p>Maximum discharging rate for the storage, in units of activity per year.</p></td>
+</tr>
+<tr class="row-odd"><td><p>MinStorageCharge[r,s,y]</p></td>
+<td><p>It sets a lower bound to the amount of energy stored, as a fraction of the maximum, with a number reanging between 0 and 1. The storage facility cannot be emptied below this level.</p></td>
+</tr>
+<tr class="row-even"><td><p>OperationalLifeStorage[r,s]</p></td>
+<td><p>Useful lifetime of the storage facility.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CapitalCostStorage[r,s,y]</p></td>
+<td><p>Binary parameter linking a technology to the storage facility it charges. It has value 0 if the technology and the storage facility are not linked, 1 if they are.</p></td>
+</tr>
+<tr class="row-even"><td><p>ResidualStorageCapacity[r,s,y]</p></td>
+<td><p>Binary parameter linking a storage facility to the technology it feeds. It has value 0 if the technology and the storage facility are not linked, 1 if they are.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capacity constraints</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>CapacityOfOneTechnologyUnit[r,t,y]</p></td>
+<td><p>Capacity of one new unit of a technology. In case the user sets this parameter, the related technology will be installed only in batches of the specified capacity and the problem will turn into a Mixed Integer Linear Problem.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TotalAnnualMaxCapacity[r,t,y]</p></td>
+<td><p>Total maximum existing (residual plus cumulatively installed) capacity allowed for a technology in a specified year.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalAnnualMinCapacity[r,t,y]</p></td>
+<td><p>Total minimum existing (residual plus cumulatively installed) capacity allowed for a technology in a specified year.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Investment constraints</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>TotalAnnualMaxCapacityInvestment[r,t,y]</p></td>
+<td><p>Maximum capacity of a technology, expressed in power units.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TotalAnnualMinCapacityInvestment[r,t,y]</p></td>
+<td><p>Minimum capacity of a technology, expressed in power units.</p></td>
+</tr>
+<tr class="row-even"><td><p>Activity constraints</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>TotalTechnologyAnnualActivityUpperLimit[r,t,y]</p></td>
+<td><p>Total maximum level of activity allowed for a technology in one year.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalTechnologyAnnualActivityLowerLimit[r,t,y]</p></td>
+<td><p>Total minimum level of activity allowed for a technology in one year.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TotalTechnologyModelPeriodActivityUpperLimit[r,t]</p></td>
+<td><p>Total maximum level of activity allowed for a technology in the entire modelled period.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalTechnologyModelPeriodActivityLowerLimit[r,t]</p></td>
+<td><p>Total minimum level of activity allowed for a technology in the entire modelled period.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Reserve margin</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ReserveMarginTagTechnology[r,t,y]</p></td>
+<td><p>Binary parameter tagging the technologies that are allowed to contribute to the reserve margin. It has value 1 for the technologies allowed, 0 otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ReserveMarginTagFuel[r,f,y]</p></td>
+<td><p>Binary parameter tagging the fuels to which the reserve margin applies. It has value 1 if the reserve margin applies to the fuel, 0 otherwise.</p></td>
+</tr>
+<tr class="row-even"><td><p>ReserveMargin[r,y]</p></td>
+<td><p>Minimum level of the reserve margin required to be provided for all the tagged commodities, by the tagged technologies. If no reserve margin is required, the parameter will have value 1; if, for instance, 20% reserve margin is required, the parameter will have value 1.2.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RE Generation target</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RETagTechnology[r,t,y]</p></td>
+<td><p>Binary parameter tagging the renewable technologies that must contribute to reaching the indicated minimum renewable production target. It has value 1 for thetechnologies contributing, 0 otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RETagFuel[r,f,y]</p></td>
+<td><p>Binary parameter tagging the fuels to which the renewable target applies to. It has value 1 if the target applies, 0 otherwise.</p></td>
+</tr>
+<tr class="row-even"><td><p>REMinProductionTarget[r,y]</p></td>
+<td><p>Minimum ratio  of all renewable commodities tagged in the RETagCommodity parameter, to be produced by the technologies tagged with the RETechnology parameter.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Emissions</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>EmissionActivityRatio[r,t,e,m,y]</p></td>
+<td><p>Emission factor of a technology per unit of activity, per mode of operation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>EmissionsPenalty[r,e,y]</p></td>
+<td><p>Penalty per unit of emission.</p></td>
+</tr>
+<tr class="row-even"><td><p>AnnualExogenousEmission[r,e,y]</p></td>
+<td><p>It allows the user to account for additional annual emissions, on top of those computed endogenously by the model (e.g. emissions generated outside the region).</p></td>
+</tr>
+<tr class="row-odd"><td><p>AnnualEmissionLimit[r,e,y]</p></td>
+<td><p>Annual upper limit for a specific emission generated in the whole modelled region.</p></td>
+</tr>
+<tr class="row-even"><td><p>ModelPeriodExogenousEmission[r,e]</p></td>
+<td><p>It allows the user to account for additional emissions over the entire modelled period, on top of those computed endogenously by the model (e.g. generated outside the region).</p></td>
+</tr>
+<tr class="row-odd"><td><p>ModelPeriodEmissionLimit[r,e]</p></td>
+<td><p>Annual upper limit for a specific emission generated in the whole modelled region, over the entire modelled period.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageUvalue[r,s]</p></td>
+<td><p>Heat transfer co-efficient of the thermal energy storage tank.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageFlowTemperature[r,s]</p></td>
+<td><p>The temperature of water inflow into thermal energy storage.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageReturnTemperature[r,s]</p></td>
+<td><p>The return water temperature in the heating grid where the thermal energy storage is connected.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageAmbientTemperature[r,s]</p></td>
+<td><p>The ambient temperature of the locations where the thermal energy storage is located.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageL2D[r,s]</p></td>
+<td><p>Binary parameter which indicates the length to diameter ratio of the thermal energy storage tank. Value is 0 if the L2D is 2 and is 1 if the L2D is 4.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storagetagheating[r,s]</p></td>
+<td><p>Binary parameter indicating whether the thermal energy storage is connected to the district heating network. 1 if it is connected and 0 is if is not.</p></td>
+</tr>
+<tr class="row-even"><td><p>Storagetagcooling[r,s]</p></td>
+<td><p>Binary parameter indicating whether the thermal energy storage is connected to the district cooling network. 1 if it is connected and 0 is if is not.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Sets.html" class="btn btn-neutral float-left" title="Sets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Variables.html" class="btn btn-neutral float-right" title="Variables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Shravan Kumar, Francesco Gardumi, Jagruti Thakur.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

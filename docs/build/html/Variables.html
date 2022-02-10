@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables &mdash; EMB3RS_TEO_Module 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Parameters" href="Parameters.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EMB3RS_TEO_Module
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="EMB3RS.html">EMB3RS project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to EMB3RS TEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Main%20Features%20of%20TEO%20Module.html">Main Features of TEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sets.html">Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Parameters.html">Parameters</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variables</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EMB3RS_TEO_Module</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Variables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Variables.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="variables">
+<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h1>
+<p>The variables are the outputs computed by the code. As much as the parameters, also the variables are functions of the elements in one or more sets. In the following Table, a list and brief description of all the variables computed by the code of OSeMOSYS (in its full version) is given. As will be explained next in this manual, a shortened version of OSeMOSYS has been created, to improve the computational capability at the expenses of the readability of the code. In such version, only some of the variables here listed are computed. When reasonable, the domain of several variables has been constrained to be positive, in order to decrease the size of the solution space and therefore the computational effort. The list of variables is shown in the below table  [3].</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-odd"><td><p>RateOfDemand[r,l,f,y]&gt;=0</p></td>
+<td><p>Intermediate   variable. It represents the energy that would be demanded in one time slice l   if the latter lasted the whole year. It is a function of the parameters   SpecifiedAnnualDemand and SpecifiedDemandProfile. | Energy (per year)</p></td>
+</tr>
+<tr class="row-even"><td><p>Demand[r,l,f,y]&gt;=0</p></td>
+<td><p>Demand for   one fuel in one time slice.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RateOfStorageCharge[r,s,ls,ld,lh,y]</p></td>
+<td><p>Intermediate   variable. It represents the commodity that would be charged to the storage   facility s in one time slice if the latter lasted the whole year. It is a   function of the RateOfActivity and the parameter TechnologyToStorage. |   Energy (per year)</p></td>
+</tr>
+<tr class="row-even"><td><p>RateOfStorageDischarge[r,s,ls,ld,lh,y]</p></td>
+<td><p>Intermediate   variable. It represents the commodity that would be discharged from storage   facility s in one time slice if the latter lasted the whole year. It is a   function of the RateOfActivity and the parameter TechnologyFromStorage.</p></td>
+</tr>
+<tr class="row-odd"><td><p>NetChargeWithinYear[r,s,ls,ld,lh,y]</p></td>
+<td><p>Net quantity   of commodity charged to storage facility s in year y. It is a function of the   RateOfStorageCharge and the RateOfStorageDischarge and it can be negative.</p></td>
+</tr>
+<tr class="row-even"><td><p>NetChargeWithinDay[r,s,ls,ld,lh,y]</p></td>
+<td><p>Net quantity   of commodity charged to storage facility s in daytype ld. It is a function of   the RateOfStorageCharge and the RateOfStorageDischarge and can be negative.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageLevelYearStart[r,s,y]&gt;=0</p></td>
+<td><p>Level of   stored commodity in storage facility s in the first time step of year y.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageLevelYearFinish[r,s,y]&gt;=0</p></td>
+<td><p>Level of   stored commodity in storage facility s in the last time step of year y.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageLevelSeasonStart[r,s,ls,y]&gt;=0</p></td>
+<td><p>Level of   stored commodity in storage facility s in the first time step of season ls.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageLevelDayTypeStart[r,s,ls,ld,y]&gt;=0</p></td>
+<td><p>Level of   stored commodity in storage facility s in the first time step of daytype ld.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageLevelDayTypeFinish[r,s,ls,ld,y]&gt;=0</p></td>
+<td><p>Level of   stored commodity in storage facility s in the last time step of daytype ld.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageLowerLimit[r,s,y]&gt;=0</p></td>
+<td><p>Minimum   allowed level of stored commodity in storage facility s, as a function of the   storage capacity and the user-defined MinStorageCharge ratio.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageUpperLimit[r,s,y]&gt;=0</p></td>
+<td><p>Maximum   allowed level of stored commodity in storage facility s. It corresponds to   the total existing capacity of storage facility s (summing newly installed   and pre-existing capacities).</p></td>
+</tr>
+<tr class="row-even"><td><p>AccumulatedNewStorageCapacity[r,s,y]&gt;=0</p></td>
+<td><p>Cumulative   capacity of newly installed storage from the beginning of the time domain to   year y.</p></td>
+</tr>
+<tr class="row-odd"><td><p>NewStorageCapacity[r,s,y]&gt;=0</p></td>
+<td><p>Capacity of   newly installed storage in year y.</p></td>
+</tr>
+<tr class="row-even"><td><p>StorageLevelTimesliceStart[r,s,l,y]</p></td>
+<td><p>Energy   stored in storage in  timeslice l.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StorageLosses[r,s,l,y]</p></td>
+<td><p>Thermal energy   losses from the storage in  timeslice   l.</p></td>
+</tr>
+<tr class="row-even"><td><p>CapitalInvestmentStorage[r,s,y]&gt;=0</p></td>
+<td><p>Undiscounted   investment in new capacity for storage facility s. Derived from the   NewStorageCapacity and the parameter CapitalCostStorage.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DiscountedCapitalInvestmentStorage[r,s,y]&gt;=0</p></td>
+<td><p>Investment   in new capacity for storage facility s, discounted through the parameter   DiscountRate.</p></td>
+</tr>
+<tr class="row-even"><td><p>SalvageValueStorage[r,s,y]&gt;=0</p></td>
+<td><p>Salvage   value of storage facility s in year y, as a function of the parameters OperationalLifeStorage   and DepreciationMethod.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DiscountedSalvageValueStorage[r,s,y]&gt;=0</p></td>
+<td><p>Salvage   value of storage facility s, discounted through the parameter DiscountRate.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalDiscountedStorageCost[r,s,y]&gt;=0</p></td>
+<td><p>Difference   between the discounted capital investment in new storage facilities and the   salvage value in year y.</p></td>
+</tr>
+<tr class="row-odd"><td><p>NumberOfNewTechnologyUnits[r,t,y]&gt;=0,   integer</p></td>
+<td><p>Number of   newly installed units of technology t in year y, as a function of the   parameter CapacityOfOneTechnologyUnit. | No unit</p></td>
+</tr>
+<tr class="row-even"><td><p>NewCapacity[r,t,y]&gt;=0</p></td>
+<td><p>Newly   installed capacity of technology t in year y.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AccumulatedNewCapacity[r,t,y]&gt;=0</p></td>
+<td><p>Cumulative   newly installed capacity of technology t from the beginning of the time   domain to year y.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalCapacityAnnual[r,t,y]&gt;=0</p></td>
+<td><p>Total   existing capacity of technology t in year y (sum of cumulative newly   installed and pre-existing capacity).</p></td>
+</tr>
+<tr class="row-odd"><td><p>RateOfActivity[r,l,t,m,y]   &gt;=0</p></td>
+<td><p>Intermediate   variable. It represents the activity of technology t in one mode of operation   and in time slice l, if the latter lasted the whole year. | Energy (per year)</p></td>
+</tr>
+<tr class="row-even"><td><p>RateOfTotalActivity[r,t,l,y]   &gt;=0</p></td>
+<td><p>Sum of the   RateOfActivity of a technology over the modes of operation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TotalTechnologyAnnualActivity[r,t,y]   &gt;=0</p></td>
+<td><p>Total annual   activity of technology t.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalAnnualTechnologyActivityByMode[r,t,m,y]   &gt;=0</p></td>
+<td><p>Annual   activity of technology t in mode of operation m.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TotalTechnologyModelPeriodActivity[r,t]</p></td>
+<td><p>Sum of the   TotalTechnologyAnnualActivity over the years of the modelled period.</p></td>
+</tr>
+<tr class="row-even"><td><p>RateOfProductionByTechnologyByMode[r,l,t,m,f,y]   &gt;=0</p></td>
+<td><p>Intermediate   variable. It represents the quantity of fuel f that technology t would   produce in one mode of operation and in time slice l, if the latter lasted   the whole year. It is a function of the variable RateOfActivity and the   parameter OutputActivityRatio.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RateOfProductionByTechnology[r,l,t,f,y]   &gt;=0</p></td>
+<td><p>Sum of the   RateOfProductionByTechnologyByMode over the modes of operation.</p></td>
+</tr>
+<tr class="row-even"><td><p>ProductionByTechnology[r,l,t,f,y]   &gt;=0</p></td>
+<td><p>Production   of fuel f by technology t in time slice l.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ProductionByTechnologyAnnual[r,t,f,y]   &gt;=0</p></td>
+<td><p>Annual production   of fuel f by technology t.</p></td>
+</tr>
+<tr class="row-even"><td><p>RateOfProduction[r,l,f,y]   &gt;=0</p></td>
+<td><p>Sum of the   RateOfProductionByTechnology over all the technologies.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Production[r,l,f,y]   &gt;=0</p></td>
+<td><p>Total   production of fuel f in time slice l. It is the sum of the   ProductionByTechnology over all technologies.</p></td>
+</tr>
+<tr class="row-even"><td><p>RateOfUseByTechnologyByMode[r,l,t,m,f,y]   &gt;=0</p></td>
+<td><p>Intermediate   variable. It represents the quantity of fuel f that technology t would use in   one mode of operation and in time slice l, if the latter lasted the whole   year. It is the function of the variable RateOfActivity and the parameter   InputActivityRatio.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RateOfUseByTechnology[r,l,t,f,y]   &gt;=0</p></td>
+<td><p>Sum of the   RateOfUseByTechnologyByMode over the modes of operation.</p></td>
+</tr>
+<tr class="row-even"><td><p>UseByTechnologyAnnual[r,t,f,y]   &gt;=0</p></td>
+<td><p>Annual use   of fuel f by technology t.</p></td>
+</tr>
+<tr class="row-odd"><td><p>UseByTechnology[r,l,t,f,y]   &gt;=0</p></td>
+<td><p>Use of fuel   f by technology t in time slice l.</p></td>
+</tr>
+<tr class="row-even"><td><p>Use[r,l,f,y]   &gt;=0</p></td>
+<td><p>Total use of   fuel f in time slice l. It is the sum of the UseByTechnology over all   technologies.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trade[r,rr,l,f,y]</p></td>
+<td><p>Quantity of   fuel f traded between region r and rr in time slice l.</p></td>
+</tr>
+<tr class="row-even"><td><p>TradeAnnual[r,rr,f,y]</p></td>
+<td><p>Annual   quantity of fuel f traded between region r and rr. It is the sum of the   variable Trade over all the time slices.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ProductionAnnual[r,f,y]   &gt;=0</p></td>
+<td><p>Total annual   production of fuel f. It is the sum of the variable Production over all   technologies.</p></td>
+</tr>
+<tr class="row-even"><td><p>UseAnnual[r,f,y]   &gt;=0</p></td>
+<td><p>Total annual   use of fuel f. It is the sum of the variable Use over all technologies.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CapitalInvestment[r,t,y]   &gt;=0</p></td>
+<td><p>Undiscounted   investment in new capacity of technology t. It is a function of the NewCapacity   and the parameter CapitalCost. | Monetary units</p></td>
+</tr>
+<tr class="row-even"><td><p>DiscountedCapitalInvestment[r,t,y]   &gt;=0</p></td>
+<td><p>Investment   in new capacity of technology t, discounted through the parameter   DiscountRate.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SalvageValue[r,t,y]   &gt;=0</p></td>
+<td><p>Salvage   value of technology t in year y, as a function of the parameters   OperationalLife and DepreciationMethod.</p></td>
+</tr>
+<tr class="row-even"><td><p>DiscountedSalvageValue[r,t,y]   &gt;=0</p></td>
+<td><p>Salvage   value of technology t, discounted through the parameter DiscountRate.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OperatingCost[r,t,y]   &gt;=0</p></td>
+<td><p>Undiscounted   sum of the annual variable and fixed operating costs of technology t.</p></td>
+</tr>
+<tr class="row-even"><td><p>DiscountedOperatingCost[r,t,y]   &gt;=0</p></td>
+<td><p>Annual   OperatingCost of technology t, discounted through the parameter DiscountRate.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AnnualVariableOperatingCost[r,t,y]   &gt;=0</p></td>
+<td><p>Annual   variable operating cost of technology t. Derived from the   TotalAnnualTechnologyActivityByMode and the parameter VariableCost.</p></td>
+</tr>
+<tr class="row-even"><td><p>AnnualFixedOperatingCost[r,t,y]   &gt;=0</p></td>
+<td><p>Annual fixed   operating cost of technology t. Derived from the TotalCapacityAnnual and the   parameter FixedCost.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TotalDiscountedCostByTechnology[r,t,y]   &gt;=0</p></td>
+<td><p>Difference   between the sums of discounted operating cost / capital cost / emission   penalties and the salvage value.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalDiscountedCost[r,y]   &gt;=0</p></td>
+<td><p>Sum of the   TotalDiscountedCostByTechnology over all the technologies.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ModelPeriodCostByRegion[r]   &gt;=0</p></td>
+<td><p>Sum of the   TotalDiscountedCost over all modelled years.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalCapacityInReserveMargin[r,y]   &gt;=0</p></td>
+<td><p>Total   available capacity of the technologies required to provide reserve margin. It   is derived from the TotalCapacityAnnual and the parameter   ReserveMarginTagTechnology. | Energy</p></td>
+</tr>
+<tr class="row-odd"><td><p>DemandNeedingReserveMargin[r,l,y]   &gt;=0</p></td>
+<td><p>Quantity of   fuel produced that is assigned to a target of reserve margin. Derived from   the RateOfProduction and the parameter ReserveMarginTagFuel.</p></td>
+</tr>
+<tr class="row-even"><td><p>TotalREProductionAnnual[r,y]</p></td>
+<td><p>Annual   production by all technologies tagged as renewable in the model. Derived from   the ProductionByTechnologyAnnual and the parameter RETagTechnology.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RETotalProductionOfTargetFuelAnnual[r,y]</p></td>
+<td><p>Annual   production of fuels tagged as renewable in the model. Derived from the   RateOfProduction and the parameter RETagFuel.</p></td>
+</tr>
+<tr class="row-even"><td><p>AnnualTechnologyEmissionByMode[r,t,e,m,y]   &gt;=0</p></td>
+<td><p>Annual   emission of agent e by technology t in mode of operation m. Derived from the   RateOfActivity and the parameter EmissionActivityRatio.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AnnualTechnologyEmission[r,t,e,y]   &gt;=0</p></td>
+<td><p>Sum of the   AnnualTechnologyEmissionByMode over the modes of operation.</p></td>
+</tr>
+<tr class="row-even"><td><p>AnnualTechnologyEmissionPenaltyByEmission[r,t,e,y]   &gt;=0</p></td>
+<td><p>Undiscounted   annual cost of emission e by technology t. It is a function of the   AnnualTechnologyEmission and the parameter EmissionPenalty.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AnnualTechnologyEmissionsPenalty[r,t,y]   &gt;=0</p></td>
+<td><p>Total   undiscounted annual cost of all emissions generated by technology t. Sum of   the AnnualTechnologyEmissionPenaltyByEmission over all the emitted agents.</p></td>
+</tr>
+<tr class="row-even"><td><p>DiscountedTechnologyEmissionsPenalty[r,t,y]   &gt;=0</p></td>
+<td><p>Annual cost   of emissions by technology t, discounted through the DiscountRate.</p></td>
+</tr>
+<tr class="row-odd"><td><p>AnnualEmissions[r,e,y]   &gt;=0</p></td>
+<td><p>Sum of the   AnnualTechnologyEmission over all technologies.</p></td>
+</tr>
+<tr class="row-even"><td><p>ModelPeriodEmissions[r,e]   &gt;=0</p></td>
+<td><p>Total system   emissions of agent e in the model period, accounting for both the emissions   by technologies and the user defined ModelPeriodExogenousEmission.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Parameters.html" class="btn btn-neutral float-left" title="Parameters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Shravan Kumar, Francesco Gardumi, Jagruti Thakur.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

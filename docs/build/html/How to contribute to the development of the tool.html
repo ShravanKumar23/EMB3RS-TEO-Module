@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing to Techno-economic optimization module (TEO) of the EMB3RS project &mdash; EMB3RS_TEO_Module 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EMB3RS_TEO_Module
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EMB3RS.html">EMB3RS project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to EMB3RS TEO Module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EMB3RS_TEO_Module</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Contributing to Techno-economic optimization module (TEO) of the EMB3RS project</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/How to contribute to the development of the tool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contributing-to-techno-economic-optimization-module-teo-of-the-emb3rs-project">
+<h1>Contributing to Techno-economic optimization module (TEO) of the EMB3RS project<a class="headerlink" href="#contributing-to-techno-economic-optimization-module-teo-of-the-emb3rs-project" title="Permalink to this headline"></a></h1>
+<p>We are very grateful that you are looking into how you can contribute to TEO module of the EMB3RS project. The TEO Module is used to conduct a source sink matching for optimal recovery and use of industrial excess heat.</p>
+<p>Contributing to the TEO module is open to everyone who is interested, and we adopt an inclusive and open policy which is described in our code of conduct</p>
+<section id="some-resources">
+<h2>Some resources:<a class="headerlink" href="#some-resources" title="Permalink to this headline"></a></h2>
+<p>The main EMB3RS website is a good place to get started with EMB3RS You can find information on how to donwload the moduel and run it in the read me file on the repository or in the documentation.</p>
+<p>The TEO is based on the open source energy system modeling tool OSeMOSYS The main OSeMOSYS website is a good place to get started with OSeMOSYS The forum is a great place to ask questions and search for answers from the knowledgeable community</p>
+</section>
+<section id="bugs">
+<h2>Bugs<a class="headerlink" href="#bugs" title="Permalink to this headline"></a></h2>
+<p>If you find a programming error in the TEO Module implementations, please submit an Issue in the repository. Follow the issue template for submitting a bug.</p>
+<p>If you find a more fundamental issue which you think is related with the formulation of TEO please submit the issue at the repository and specify the .</p>
+<p>Errors, typos or spelling mistakes in the documentation</p>
+</section>
+<section id="ideas-and-suggestions">
+<h2>Ideas and Suggestions<a class="headerlink" href="#ideas-and-suggestions" title="Permalink to this headline"></a></h2>
+<p>If you have a great idea for how the TEO could be improved, or to suggest a useful addition to the model, please submit a feature request.</p>
+</section>
+<section id="git-workflow">
+<h2>Git Workflow<a class="headerlink" href="#git-workflow" title="Permalink to this headline"></a></h2>
+<p>To work with the TEO code bases, please follow the forking workflow recommended for contributing to open-source projects. The steps below assume you have a Github account.</p>
+<p>Fork the repository to which you wish to contribute by clicking the grey fork button or visiting <a class="reference external" href="https://github.com/EMB3RS-TEO-Module/fork">https://github.com/EMB3RS-TEO-Module/fork</a> Clone your fork of the repository git clone <a class="reference external" href="http://github.com//EMB3RS-TEO-Module">http://github.com//EMB3RS-TEO-Module</a> Create a new branch on which you will commit your changes git checkout -b Do the work and stage and commit your changes: git add …, git commit -m “A nice descriptive message” Push the changes to your fork git push -u origin/ Submit a pull request from your fork of the repository to the master branch of the original repository. The pull request is reviewed. Any changes required by the review can be performed on the same branch and pushed to the forked repo as in the steps above. Once the pull request has been reviewed and accepted, you may delete your local copy of the branch git branch -d and update your copy of the master branch git checkout master, git pull origin master</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Shravan Kumar, Francesco Gardumi, Jagruti Thakur.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

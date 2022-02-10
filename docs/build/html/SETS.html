@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sets &mdash; EMB3RS_TEO_Module 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Parameters" href="Parameters.html" />
+    <link rel="prev" title="Main Features of TEO Module" href="Main%20Features%20of%20TEO%20Module.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EMB3RS_TEO_Module
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="EMB3RS.html">EMB3RS project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction to EMB3RS TEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Main%20Features%20of%20TEO%20Module.html">Main Features of TEO Module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Parameters.html">Parameters</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EMB3RS_TEO_Module</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Sets</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Sets.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sets">
+<h1>Sets<a class="headerlink" href="#sets" title="Permalink to this headline"></a></h1>
+<p>In OSeMOSYS, like usually in linear programs, sets, parameters and variables are defined. In this section, the sets, parameters and variables existing in OSeMOSYS are listed and briefly described. Illustrative examples on how to assign values for each of these will be given in the following Sections.</p>
+<p>The ‘sets’ define the physical structure of a model, usually independent from the specific scenarios which will be run. They define the time domain and time split, the spatial coverage, the technologies and energy vectors to be considered, etc. For instance, when a variable is defined as a function of the set ‘YEAR’ it will be indicated as <strong>variablename[y]</strong> at it will be computed for every year listed in the set.
+The sets of OSeMOSYS are presented in the Table below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 96%" />
+<col style="width: 2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+<th class="head"><p><strong>Index</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>YEAR</p></td>
+<td><p>It represents the time frame of the model, it   contains all the years to be considered in the study.</p></td>
+<td><p>y</p></td>
+</tr>
+<tr class="row-odd"><td><p>TECHNOLOGY</p></td>
+<td><p>It includes any element of the energy system that   changes a commodity from one form to another, uses it or supplies it. All   system components are set up as a ‘technology’ in OSeMOSYS. As the model is   an abstraction, the modeller is free to interpret the role of a technology at   will, where relevant. It may for example represent a single real technology   (such as a power plant) or can represent a heavily aggregated collection of   technologies (such as the stock of several million light bulbs), or may even   simply be a ‘dummy technology’, perhaps used for accounting purposes.</p></td>
+<td><p>t</p></td>
+</tr>
+<tr class="row-even"><td><p>TIMESLICE</p></td>
+<td><p>It represents the time split of each modelled year,   therefore the time resolution of the model. Common to several energy systems   modelling tools (incl. MESSAGE / MARKAL / TIMES), the annual demand is   ‘sliced’ into representative fractions of the year. It is necessary to assess   times of the year when demand is high separately from times when demand is   low, for fuels that are expensive to store. In order to reduce the   computation time, these ‘slices’ are often grouped. Thus, the annual demand may   be split into aggregate seasons where demand levels are similar (such as   ‘summer, winter and intermediate’). Those seasons may be subdivided into   aggregate ‘day types’ (such as workdays and weekends), and the day further   sub divided (such as into day and night) depending on the level of demand.</p></td>
+<td><p>l</p></td>
+</tr>
+<tr class="row-odd"><td><p>FUEL</p></td>
+<td><p>It includes any energy vector, energy service or   proxies entering or exiting technologies. These can be aggregate groups,   individual flows or artificially separated, depending on the requirements of   the analysis.</p></td>
+<td><p>f</p></td>
+</tr>
+<tr class="row-even"><td><p>EMISSION</p></td>
+<td><p>It includes any kind of emission potentially   deriving from the operation of the defined technologies. Typical examples   would include atmospheric emissions of greenhouse gasses, such as CO2.</p></td>
+<td><p>e</p></td>
+</tr>
+<tr class="row-odd"><td><p>MODE_OF_OPERATION</p></td>
+<td><p>It defines the number of modes of operation that the technologies can have. If a   technology can have various input or output fuels and it can choose the mix (i.e.   any linear combination) of these input or output fuels, each mix can be   accounted as a separate mode of operation. For example, a CHP plant may produce   heat in one mode of operation and electricity in another.</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p>REGION</p></td>
+<td><p>It sets the regions to be modelled, e.g. different   countries. For each of them, the supply-demand balances for all the energy   vectors are ensured, including trades with other regions. In some occasions   it might be computationally more convenient to model different countries   within the same region and differentiate them simply by creating ad hoc fuels   and technologies for each of them.</p></td>
+<td><p>r</p></td>
+</tr>
+<tr class="row-odd"><td><p>SEASON</p></td>
+<td><p>It gives indication (by successive numerical values)   of how many seasons (e.g. winter, intermediate, summer) are accounted for and   in which order.   This set is needed if storage facilities are   included in the model.</p></td>
+<td><p>ls</p></td>
+</tr>
+<tr class="row-even"><td><p>DAYTYPE</p></td>
+<td><p>It gives indication (by successive numerical values)   of how many day types (e.g. workday, weekend) are accounted for and in which   order.    This set is needed if storage facilities are   included in the model.</p></td>
+<td><p>ld</p></td>
+</tr>
+<tr class="row-odd"><td><p>DAILYTIMEBRACKET</p></td>
+<td><p>It gives indication (by successive numerical values)   of how many parts the day is split into (e.g. night, morning, afternoon,   evening) and in which order these parts are sorted.    This set is needed if storage facilities are   included in the model.</p></td>
+<td><p>lh</p></td>
+</tr>
+<tr class="row-even"><td><p>STORAGE</p></td>
+<td><p>It includes storage facilities in the model.</p></td>
+<td><p>s</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Main%20Features%20of%20TEO%20Module.html" class="btn btn-neutral float-left" title="Main Features of TEO Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Parameters.html" class="btn btn-neutral float-right" title="Parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Shravan Kumar, Francesco Gardumi, Jagruti Thakur.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
