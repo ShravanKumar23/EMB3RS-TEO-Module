@@ -26,48 +26,7 @@ TEO_model.py
 This script contains the TEO module that has been defined as a function. The TEO module needs 5 different data objects as an input. These data objects are read in from the input file and are written into suitable dataframes by the load_data function. The main data frame that are needed are the 'Sets, Parameters, Defaults, mcs_Parameters and the MCS_number'. The dataframes are read in fro the excek input file using Pandas and written into 5 dataframes called 'sets_df, df, defaults_df, mcs_df, n'. The model is defined as a function called 'buildmodel'. The function takes these 5 data frames as input. The function creates the parameters, variables and the sets needed to structure the model. The equations that are needed to build the model are specified within the function. The function builds the model, solves it and returns the result as a single dataframe 'res_df'.
 
 ## Functions
-Several functions are used to build the TEO model. These functions are used to pre-process the data needed to run the model. The main function is the 'load_data' function which reads in the data from the current version of input file and stores it as the data frames that are used as input for the 'TEO_model' function. 
-
-## Input file
-
-An excel file is used as input to the TEO module. The inputs to the TEO module are in a tabular manner. There are mainly two different types of inputs to the TEO. The first main inputs are the SETS that are used to structure the model.Thesse rae input via the SETS sheet in the input excel file. The sets are used to build the skeleton of the model. The parameters are also input through the excel file. The parameters are input as a value that is indexed over the sets. The parameters are also arranged column wise in excel. The default for the parameters values are also specified into the excel file and read into as a data frame in the code. 
-
-## Running in TEO
-
-The input file for the prototype is ‘Input_file_TEO.xlsx’. To run the module:
-
-Instruction to run the model
-- Download the code and the input file in the test folder. 
-- The code for the TEO us organised in three python files, ‘TEO_Model’, ‘TEO_functions’ and ‘TEO_running_file’. The ‘TEO_Model’ file contains the code of the TEO module and all   the equations of the optimization model. ‘TEO_functions’ contains certain pre and post processing functions that are needed to run the module. ‘TEO_running_file’ is the         executable file of the TEO. The user can specify the input file and desired format of outputs in the ‘TEO_running_file’.
-
-- The code and the input file must be downloaded and saved in a specific manner. A main folder called ‘TEO’ must be created and the code will be down-loaded into this folder. Within this main folder, two sub folders named ‘Input_data’ and ‘Output_data’ must be created. The input file must be down-loaded into the ‘Input_data’ folder. A representation of how the files must be organized is shown below. 
-
-•	TEO (Main folder) 
-
-   o Input_data 
-  
-        	Input_file_TEO.xlsx 
-        
-   o Output_data 
-  
-   o TEO_Model
-  
-   o TEO_functions
-   
-   o TEO_running_file
-
-- Create two folders, named ‘Input_data’ and ‘Output_data’. The python file with the code, the functions and the two folders mentioned above should be located in the same directory on the computer. 
-- Once the files are downloaded and the folder structure is established, the model can be run using the TEO_running_file. The name if the input directory and the input file must   be checked in the TEO_running_file. The TEO module can output results in two formats, excel and csv. The preference for the output format can also be set in the               TEO_running_file by specifying a ‘True’ or ‘False’ next to the output formats in the TEO_running_file. Once the TEO analyses in completed, the results file named  ‘Input_file_TEO_Results.xlsx’ will be save in ‘Output_data’ sub-folder.
-- When the model is run, python will provide a series of logs, which describe the model simulation status as shown in the figure 1 below. 
-- Once the model run is completed, the output will be saved in a file name ‘Input_file_TEO_Results.xlsx’ in the ‘Output_data’ folder.
- 
-## Results:
-
-- Python Log
-A quick check of the results can be done by looking at the python log. For the current test case, the model must return optimal solution found a cost value of 1748164.2. Tjis can be used to evaluate the results of the model. 
- 
-- Results in excel
-The results are shown in an excel spreadsheet. Results for each variable is written on a sheet. The results for production from the different technologies is shown in figure 2.
+Several functions are used to build the TEO model. These functions are used to pre-process the data needed to run the model. The functions 'load_data' and 'prepare_inputs' in the data from the data that are used as input for the 'TEO_model' function. 
 
 ## Emb3rs project
 
@@ -84,10 +43,10 @@ The EMB3RS project has received funding from the European Union’s Horizon 2020
 
 ## Licenses
 
-•	Check the license for PuLP, I suppose we will have to use the same; report the li-cense name and info and link;
 •	The PULP version of OSeMOSYS has been licensed under an ‘Apache License 2.0’ which is a permissive license whose main conditions require preservation of copy-right and license notices. Contributors provide an express grant of patent rights. Li-censed works, modifications, and larger works may be distributed under different terms and without source code.
 •	The input data file ‘Input_file_TEO.xlsx’ is licensed under a Creative Commons At-tribution 4.0 International License.
-References
+
+##References
 
 [1]	M. Howells et al., “OSeMOSYS: The Open Source Energy Modeling System. An introduction to its ethos, structure and development.,” Energy Policy, vol. 39, no. 10, pp. 5850–5870, 2011, doi: 10.1016/j.enpol.2011.06.033.
 [2]	“OSeMOSYS - Home.” 2018, [Online]. Available: http://www.osemosys.org/.
